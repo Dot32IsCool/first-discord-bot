@@ -1,5 +1,6 @@
-var Discord = require('discord.js');
-var client = new Discord.Client();
+const Discord = require('discord.js');
+const client = new Discord.Client();
+const {token} = require('./key.json');
 
 var greetings = ['hey', 'hello', 'yo', 'hi', 'greetings', 'sup', 'wassup', 'hey sexy :smirk:', 'uwu', 'gday', 'wadup', 'bro', 'i hate you', 'you underestimate my power', 'hellohello', 'Im feeling kinda tired sorry', 'youre boring', 'stop texting me', 'you be spamming', 'hiya!', 'goodmorning/night bc idk what time of day it is']
 var greetLength = greetings.length
@@ -22,6 +23,6 @@ client.on('message', message => {
 	}
 });
 
-client.login('ODAxNDYzMTY0Mzg1ODg2MjEw.YAhCvA.UxyutS-e4XW1uadSd74ccp5T8Ds');
+client.login(token);
 
 // run `node main.js` from terminal to boot
