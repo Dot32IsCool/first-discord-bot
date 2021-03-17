@@ -12,12 +12,9 @@ client.once('ready', () => {
 client.on('message', message => {
 	if(message.author.bot) return;
 
-	// if(message.content.startsWith('hey')){
-	// 	message.channel.send('hey sexy :smirk:');
-	// }
 	for (var i = 0; i < greetLength; i++) {
-    //console.log(greetings[i]);
-    if(message.content.startsWith(greetings[i])){
+    //if(message.content.startsWith(greetings[i])){
+    if(message.content === greetings[i] || message.content.startsWith(greetings[i] + " ")){
 			message.channel.send(greetings[Math.floor(Math.random() * greetLength)]);
 		}
 	}
